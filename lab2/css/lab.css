@@ -1,9 +1,27 @@
-/* Here we can set styles for this lab page that we don't want to effect others pages */
+h1 {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: magenta;
+  text-indent: 170px;
+  font-size: 150%;
+}
 
-/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
-.minor-section {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
-  }
+p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: lightseagreen;
+  text-indent: 25px;
+}
+
+#content {
+  background-color: yellow;
+  width: 500px;
+  min-height: 500px;
+  padding: 10px;
+  margin-left: 700px;
+  margin-top: 250px;
+  border: solid 5px magenta;
+}
+
+img{
+  width: 100%;
+  border-radius: 50%;
+}
