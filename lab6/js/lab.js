@@ -2,7 +2,7 @@
 //April 23 2024
 
 //Define Variables
-const myTransport = [Kia Forte, Bus, Walking];
+const myTransport = ["Kia Forte", "Bus", "Walking"];
 
 //Define Objects
 const myMainRide = {
@@ -16,6 +16,6 @@ const myMainRide = {
 }
 
 //Code
-document.writeln("Getting Around" + myTransport + "<br>");
+document.writeln("Getting Around: " + myTransport + "<br>");
 document.writeln("My Main Ride: <pre>", 
     JSON.stringify(myMainRide, null, '\t'), "</pre>");
