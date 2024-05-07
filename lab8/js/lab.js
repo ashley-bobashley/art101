@@ -1,21 +1,24 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+//Ashley Stelljes <cstellje@ucsc.edu>
+//May 6th 2024
 
-// Constants
-
-// Functions
-
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
+// Declare Functions
+// This function multiplies the number inputted to it by 13.679, saves the result, then returns the result
+function multiply(x){
+  let results = x * 13.679;
+  return results;
 }
 
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happen
-}
+// Declare Variables
+let numArray = [1, 2, 7, 19, 36, 45, 81, 92, 75];
+let mapResults = numArray.map(multiply);
 
-// let's get this party started
-main();
+// Code
+numArray.map(multiply);
+numArray.map(function(x){
+  let results = x / 2;
+  return results;
+})
+
+//Output
+console.log("numArray.map(multiply) Results: ", mapResults);
+$("#output").html(mapResults);
