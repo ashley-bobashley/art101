@@ -14,5 +14,5 @@ $("#submit").click(function(){
   // Sorts the user's inputted information
   const userNameSorted = sortString(userName);
   // Adds the sorted user input into the output div
-  $("#output").html('<div class="text"><p>' + userNameSorted + '</p></div>');
+  $("#output").append('<div class="text"><p>' + userNameSorted + '</p></div>');
 });
