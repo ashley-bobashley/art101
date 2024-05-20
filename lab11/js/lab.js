@@ -1,21 +1,18 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+//Ashley Stelljes <cstellje@ucsc.edu>
+//May 19th 2024
 
-// Constants
-
-// Functions
-
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
+// Declare Functions
+// This function takes an inputted string and sorts it alphabetically.
+function sortString(inputString) {
+  return inputString.split('').sort().join('');
 }
 
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happen
-}
-
-// let's get this party started
-main();
+// Calls back to the sortString function when a button is pressed
+$("#submit").click(function(){
+  // Get user input and store it as a constant
+  const userName = $("#username").val();
+  // Sorts the user's inputted information
+  const userNameSorted = sortString(userName);
+  // Adds the sorted user input into the output div
+  $("#output").html('<div class="text"><p>' + userNameSorted + '</p></div>');
+});
