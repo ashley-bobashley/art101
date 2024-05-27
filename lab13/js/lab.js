@@ -1,21 +1,38 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+//Ashley Stelljes <cstellje@ucsc.edu>
+//May 23th 2024
 
-// Constants
+// Create Output Variable
+let outputStr = "";
 
-// Functions
-
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
+// Declare Functions
+// This function prints out numbers from 1 to 200, unless they are a multiple of 3, 5, or 7. Multiples of 3 will instead print out Fizz!, multiples of 5 will instead print out Buzz!, and multiples of 7 will instead print out Boom! Multiples of both 3 and 5 will instead print out FizzBuzz!, multiples of both 3 and 7 will instead print out FizzBoom!, and multiples of 5 and 7 will instead print out BuzzBoom! Multiples of 3, 5, AND 7 will instead print out FizzBuzzBoom!
+function fizzBuzzBoom(){
+  for (i=1; i<=200; i++){
+    // Calculate and Create Output
+    if (i%105 == 0){
+      outputStr+="FizzBuzzBoom!\n";
+    } else if (i%35 == 0){
+      outputStr+="BuzzBoom!\n";
+    } else if (i%21 == 0){
+      outputStr+="FizzBoom!\n";
+    } else if (i%15 == 0){
+      outputStr+="FizzBuzz!\n";
+    } else if (i%3 == 0) {
+      outputStr+="Fizz!\n";
+    } else if (i%5 == 0){
+      outputStr+="Buzz!\n";
+    } else if (i%7 == 0){
+      outputStr+="Boom!\n";
+    } else {
+      outputStr+=i;
+      outputStr+="\n";
+    }
+  }
 }
 
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happen
-}
-
-// let's get this party started
-main();
+// Calls back to the fizzBuzzBoom function when a button is pressed
+$("#button").click(function(){
+  fizzBuzzBoom();
+  // Outputs the result of the fizzBuzzBoom function
+  $("#output").append('<div class="text"><p>' + outputStr + '</p></div>');
+});
